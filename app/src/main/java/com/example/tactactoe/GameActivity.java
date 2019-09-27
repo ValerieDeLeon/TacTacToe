@@ -7,37 +7,42 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class GameActivity extends AppCompatActivity {
+public class GameActivity extends AppCompatActivity implements View.OnClickListener {
 
-    boolean player1 = true; // Player1 = X's
-    boolean player2 = false; // PLayer2 = O's
-
-    Button box_1 = (Button) findViewById(R.id.button1);
-    Button box_2 = (Button) findViewById(R.id.button2);
-    Button box_3 = (Button) findViewById(R.id.button3);
-    Button box_4 = (Button) findViewById(R.id.button4);
-    Button box_5 = (Button) findViewById(R.id.button5);
-    Button box_6 = (Button) findViewById(R.id.button6);
-    Button box_7 = (Button) findViewById(R.id.button7);
-    Button box_8 = (Button) findViewById(R.id.button8);
-    Button box_9 = (Button) findViewById(R.id.button9);
+    public Button[][] buttonSquare = new Button[3][3];
+    public boolean player1 = true;
+    public int roundCount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gamescreen);
+
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; i < 3; i++)
+            {
+                String buttonID = "button" + j;
+                int resID = getResources().getIdentifier(buttonID, "id", getPackageName());
+                buttonSquare[i][j] = findViewById(resID);
+                buttonSquare[i][j].setOnClickListener(this);
+            }
+        }
     }
 
     // Game Board Functionality
-    public void boardClick(Button square)
+    @Override
+    public void onClick(View view)
     {
+        if(!((Button) view).getText().toString().equals(""))
+        {
+            return;
+        }
         if (player1)
-        {
-            square.setText("X");
-        }
-        else if (player2)
-        {
-            square.setText("O");
-        }
+            ((Button) view).setText("X");
+        else
+            ((Button) view).setText("O");
+
+        roundCount++;
     }
 }
