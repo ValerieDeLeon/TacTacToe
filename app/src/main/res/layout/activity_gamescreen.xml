@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#00456B"
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/play2_score"
+        android:id="@+id/player2_score"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Player 2:"
@@ -16,7 +14,7 @@
         android:textColor="#fec054"/>
 
     <TextView
-        android:id="@+id/play1_score"
+        android:id="@+id/player1_score"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Player 1:"
@@ -30,7 +28,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/button00"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -38,7 +36,7 @@
             android:textSize="60sp" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/button01"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -46,7 +44,7 @@
             android:textSize="60sp" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/button02"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -62,7 +60,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/button10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -70,7 +68,7 @@
             android:textSize="60sp" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/button11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -78,7 +76,7 @@
             android:textSize="60sp" />
 
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/button12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -94,7 +92,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/button20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -102,7 +100,7 @@
             android:textSize="60sp" />
 
         <Button
-            android:id="@+id/button8"
+            android:id="@+id/button21"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -110,7 +108,7 @@
             android:textSize="60sp" />
 
         <Button
-            android:id="@+id/button9"
+            android:id="@+id/button22"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

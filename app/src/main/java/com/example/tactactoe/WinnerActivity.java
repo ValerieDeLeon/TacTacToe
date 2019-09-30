@@ -16,7 +16,7 @@ public class WinnerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.winner);
 
-        button = (Button) findViewById(R.id.homebutton);
+        button = findViewById(R.id.homebutton);
         button.setOnClickListener(new View.OnClickListener()
         {
             @Override
