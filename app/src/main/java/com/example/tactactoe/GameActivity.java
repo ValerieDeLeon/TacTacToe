@@ -12,6 +12,9 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     public Button[][] buttonSquare = new Button[3][3];
     public boolean player1 = true;
     public int roundCount;
+    
+    public TextView player1_score;
+    public TextView player2_score;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
