@@ -10,11 +10,14 @@ import android.widget.TextView;
 
 public class GameActivity extends AppCompatActivity implements View.OnClickListener {
 
-    public Button[][] buttonSquare = new Button[3][3];
-    public boolean player1 = true;
-    public int roundCount;
-//    public TextView player1_score;
-//    public TextView player2_score;
+    private Button[][] buttonSquare = new Button[3][3];
+    private boolean player1 = true;
+    private int roundCount;
+
+//    private int player1Points;
+//    private int player2Points;
+//    private TextView player1_score;
+//    private TextView player2_score;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,16 +38,16 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
     // Game Board Functionality
     @Override
-    public void onClick(View view)
+    public void onClick(View v)
     {
-        if(!((Button) view).getText().toString().equals(""))
+        if(!((Button) v).getText().toString().equals(""))
         {
             return;
         }
         if (player1)
-            ((Button) view).setText("X");
+            ((Button) v).setText("X");
         else
-            ((Button) view).setText("O");
+            ((Button) v).setText("O");
 
         roundCount++;
     }

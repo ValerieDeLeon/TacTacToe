@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#00456B"
     android:orientation="vertical"
     tools:context=".WinnerActivity">
 
@@ -14,7 +15,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView3"
@@ -25,15 +26,14 @@
                 android:layout_marginBottom="25dp"
                 android:gravity="center"
                 android:text="TextView"
+                android:textColor="#FEC054"
                 android:textSize="40sp" />
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/imageView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="45dp"
-                app:srcCompat="@drawable/winner" />
+                app:srcCompat="@drawable/loser" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -44,20 +44,26 @@
                 android:layout_marginBottom="25dp"
                 android:gravity="center"
                 android:text="TextView"
+                android:textColor="#FEC054"
                 android:textSize="40sp" />
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/imageView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/loser" />
+                android:layout_gravity="center"
+                android:layout_marginBottom="45dp"
+                app:srcCompat="@drawable/winner" />
 
             <Button
                 android:id="@+id/homebutton"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Home" />
+                android:background="#D9815B"
+                android:text="Home"
+                android:textColor="#FEC054" />
+
         </LinearLayout>
     </ScrollView>
 
