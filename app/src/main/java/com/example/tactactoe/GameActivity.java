@@ -10,12 +10,12 @@ import android.widget.TextView;
 
 public class GameActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button[][] buttonSquare = new Button[3][3];
+    // Variables
+    private Button[] buttonSquare = new Button[9];
     private boolean player1 = true;
     private int roundCount;
-
-//    private int player1Points;
-//    private int player2Points;
+    private int player1Points = 0;
+    private int player2Points = 0;
 //    private TextView player1_score;
 //    private TextView player2_score;
 
@@ -24,19 +24,26 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gamescreen);
 
-        for (int i = 0; i < 3; i++)
+        // Gets button ID's & listens for activation
+        for (int i = 0; i < buttonSquare.length; i++)
         {
-            for (int j = 0; j < 3; j++)
-            {
-                String buttonID = "button" + i + j;
+                String buttonID = "button" + i;
                 int resID = getResources().getIdentifier(buttonID, "id", getPackageName());
-                buttonSquare[i][j] = findViewById(resID);
-                buttonSquare[i][j].setOnClickListener(this);
-            }
+                buttonSquare[i] = findViewById(resID);
+                buttonSquare[i].setOnClickListener(this);
         }
+
+        // Reset Button Functionality
+        Button resetButton = findViewById(R.id.resetButton);
+        resetButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                resetGame();
+            }
+        });
     }
 
-    // Game Board Functionality
+    // Game Board Functionality (Turning & Scoring)
     @Override
     public void onClick(View v)
     {
@@ -50,5 +57,25 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
             ((Button) v).setText("O");
 
         roundCount++;
+    }
+
+    // Resets Game
+    private void resetBoard()
+    {
+        for (int i = 0; i < buttonSquare.length; i++)
+        {
+            buttonSquare[i].setText("");
+        }
+
+        roundCount = 0;
+        player1 = true;
+    }
+
+    private void resetGame()
+    {
+        player1Points = 0;
+        player2Points = 0;
+//        updatePointsText();
+        resetBoard();
     }
 }
