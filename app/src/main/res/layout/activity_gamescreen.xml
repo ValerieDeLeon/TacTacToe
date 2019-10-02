@@ -11,7 +11,8 @@
         android:layout_height="wrap_content"
         android:text="Player 2: 0"
         android:textColor="#fec054"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:freezesText="true"/>
 
     <TextView
         android:id="@+id/player1_score"
@@ -19,7 +20,8 @@
         android:layout_height="wrap_content"
         android:text="Player 1: 0"
         android:textColor="#fec054"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:freezesText="true"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -35,7 +37,8 @@
             android:textColor="#fec054"
             android:background="#D9815B"
             android:onClick="onClick"
-            android:textSize="60sp" />
+            android:textSize="60sp"
+            android:freezesText="true"/>
 
         <Button
             android:id="@+id/button1"
@@ -44,7 +47,8 @@
             android:layout_weight="1"
             android:background="#D9815B"
             android:onClick="onClick"
-            android:textSize="60sp" />
+            android:textSize="60sp"
+            android:freezesText="true"/>
 
         <Button
             android:id="@+id/button2"
@@ -53,7 +57,8 @@
             android:layout_weight="1"
             android:background="#D9815B"
             android:onClick="onClick"
-            android:textSize="60sp" />
+            android:textSize="60sp"
+            android:freezesText="true"/>
 
     </LinearLayout>
 
@@ -70,7 +75,8 @@
             android:layout_weight="1"
             android:background="#D9815B"
             android:onClick="onClick"
-            android:textSize="60sp" />
+            android:textSize="60sp"
+            android:freezesText="true"/>
 
         <Button
             android:id="@+id/button5"
@@ -79,7 +85,8 @@
             android:layout_weight="1"
             android:background="#D9815B"
             android:onClick="onClick"
-            android:textSize="60sp" />
+            android:textSize="60sp"
+            android:freezesText="true"/>
 
         <Button
             android:id="@+id/button6"
@@ -88,7 +95,8 @@
             android:layout_weight="1"
             android:background="#D9815B"
             android:onClick="onClick"
-            android:textSize="60sp" />
+            android:textSize="60sp"
+            android:freezesText="true"/>
 
     </LinearLayout>
 
@@ -105,7 +113,8 @@
             android:layout_weight="1"
             android:background="#D9815B"
             android:onClick="onClick"
-            android:textSize="60sp" />
+            android:textSize="60sp"
+            android:freezesText="true"/>
 
         <Button
             android:id="@+id/button8"
@@ -114,7 +123,8 @@
             android:layout_weight="1"
             android:background="#D9815B"
             android:onClick="onClick"
-            android:textSize="60sp" />
+            android:textSize="60sp"
+            android:freezesText="true"/>
 
         <Button
             android:id="@+id/button9"
@@ -123,7 +133,8 @@
             android:layout_weight="1"
             android:background="#D9815B"
             android:onClick="onClick"
-            android:textSize="60sp" />
+            android:textSize="60sp"
+            android:freezesText="true"/>
 
     </LinearLayout>
 
@@ -133,6 +144,7 @@
         android:layout_height="wrap_content"
         android:background="#578E67"
         android:text="Reset"
-        android:textColor="#FEC054" />
+        android:textColor="#FEC054"
+        android:freezesText="true"/>
 
 </LinearLayout>
