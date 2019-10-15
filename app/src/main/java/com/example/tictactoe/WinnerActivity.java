@@ -7,7 +7,7 @@ import android.view.View;
 import android.os.Bundle;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity
+public class WinnerActivity extends AppCompatActivity
 {
     private Button button;
     @Override
@@ -16,21 +16,21 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        button = (Button) findViewById(R.id.startButton);
+        button = (Button) findViewById(R.id.homebutton);
         button.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
-                openGameActivity();
+                openMainActivity();
             }
 
         });
     }
 
-        public void openGameActivity()
-        {
-            Intent intent = new Intent(this, GameActivity.class);
-            startActivity(intent);
-        }
+    public void openMainActivity()
+    {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 }
